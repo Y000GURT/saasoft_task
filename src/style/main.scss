@@ -1,9 +1,21 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-html, body {
+button {
+    border: none;
+    background: none;
+}
+html {
+    height: 100%;
+    font-size: 62.5%;
+    color: #212121;
+}
+body {
+    height: 100%;
+}
+#app {
     height: 100%;
 }
 
