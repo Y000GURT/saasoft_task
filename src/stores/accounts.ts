@@ -18,7 +18,7 @@ export const useAccountStore = defineStore('accountStore', {
     state: (): State => ({
         accounts: [{
             id: 1,
-            marker: [{text: 'крутой'}],
+            marker: [{text: 'программист'}],
             type: 'local',
             login: 'almaz',
             password: '123456'
