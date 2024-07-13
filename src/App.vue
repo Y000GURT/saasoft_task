@@ -2,7 +2,7 @@
   <div class="container">
     <header class="header">
       <h1 class="header__title">Учетные записи</h1>
-      <button class="header__plus">
+      <button class="header__plus" @click="addAccount">
         <img src="./img/plus.svg">
       </button>
     </header>
@@ -18,6 +18,27 @@
 
 <script setup lang="ts">
 import AccountList from '../src/components/AccountList.vue'
+import { useAccountStore } from './stores/accounts.ts'
+import { onBeforeMount } from 'vue'
+
+const accountStore = useAccountStore()
+
+onBeforeMount(() => {
+  const accs = localStorage.getItem('accounts')
+  if (accs) {
+    accountStore.changeAccounts(JSON.parse(accs))
+  }
+})
+
+function addAccount() {
+  accountStore.addAccount({
+    id: Date.now(),
+    marker: [{text: ''}],
+    type: 'local',
+    login: '',
+    password: '',
+  })
+}
 </script>
 
 <style lang="scss" scoped>
