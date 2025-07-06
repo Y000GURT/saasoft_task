@@ -89,6 +89,7 @@ onMounted(() => {
       <ElInput
         v-model="form.password"
         maxlength="100"
+        type="password"
         @blur="handleSaveAccount"
       />
     </ElFormItem>
