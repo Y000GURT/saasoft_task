@@ -20,6 +20,5 @@ declare module 'vue' {
     ElTag: typeof import('element-plus/es')['ElTag']
     MainForm: typeof import('./components/MainForm.vue')['default']
     MainHeader: typeof import('./components/MainHeader.vue')['default']
-    MainTag: typeof import('./components/MainTag.vue')['default']
   }
 }
